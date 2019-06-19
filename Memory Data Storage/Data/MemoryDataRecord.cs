@@ -14,132 +14,40 @@ namespace Memory_Data_Storage
 
         private MemoryDataRecord()
         {
-            var jose = new ContactDTO
-            {
-                Name = "Jose",
-                LastName = "Cespedes",
-            };
-
-            var david = new ContactDTO
-            {
-                Name = "David",
-                LastName = "Santa cruz",
-            };
-            var victor = new ContactDTO
-            {
-                Name = "Victor",
-                LastName = "Cossio",
-            };
-
             PhoneBook = new List<PhoneBookDTO>
                 {
 
                     new PhoneBookDTO
                     {
-                        Contact = jose,
-                        AddressList = new List<AddressDTO>
-                        {
-                            new AddressDTO
+                        Contact = new ContactDTO
                             {
-                                IdContact = jose.IdContact,
-                                Address = "Av Santacruz 344",
-                                City = "Cochabamba",
-                                Country = "Bolivia"
+                                Name = "Victor",
+                                LastName = "Cossio"
                             }
-                        },
-                        EmailList = new List<E_MailAddressDTO>
+                    },
+                     new PhoneBookDTO
+                    {
+                        Contact = new ContactDTO
                         {
-                            new E_MailAddressDTO
-                            {
-                                IdContact = jose.IdContact,
-                                EMailAddress = "Jhosep50@gmail.com",
-                                EmailType = "Personal"
-                            }
-
-                        },
-                        PhoneList = new List<PhoneDTO>
-                        {
-                            new PhoneDTO
-                            {
-                                IdContact = jose.IdContact,
-                                PhoneNumber = "73793714",
-                                PhoneType = "Movile"
-                            },
-                            new PhoneDTO
-                            {
-                                IdContact = jose.IdContact,
-                                PhoneNumber = "4561374",
-                                PhoneType = "Home"
+                            Name = "Jose",
+                            LastName = "Cespedes",
+                            Phone = new List<PhoneDTO> {
+                                new PhoneDTO { PhoneNumber = "76583920", PhoneType = "Mobile" },
+                                new PhoneDTO { PhoneNumber = "54637474", PhoneType = "Home" }
                             }
 
                         }
                     },
-                    new PhoneBookDTO
+                      new PhoneBookDTO
                     {
-                        Contact = david,
-                        AddressList = new List<AddressDTO>
+                        Contact =  new ContactDTO
                         {
-                            new AddressDTO
-                            {
-                                IdContact = david.IdContact,
-                                Address = "Av America 512",
-                                City = "Cochabamba",
-                                Country = "Bolivia"
+                            Name = "David",
+                            LastName = "Santa cruz",
+                            Phone = new List<PhoneDTO> {
+                                new PhoneDTO { PhoneNumber = "77348636", PhoneType = "Mobile" },
+                                new PhoneDTO { PhoneNumber = "44446778", PhoneType = "Home" }
                             }
-                        },
-                        EmailList = new List<E_MailAddressDTO>
-                        {
-                            new E_MailAddressDTO
-                            {
-                                IdContact = david.IdContact,
-                                EMailAddress = "Danniel0@gmail.com",
-                                EmailType = "Personal"
-                            }
-
-                        },
-                        PhoneList = new List<PhoneDTO>
-                        {
-                            new PhoneDTO
-                            {
-                                IdContact = david.IdContact,
-                                PhoneNumber = "6204532",
-                                PhoneType = "Movile"
-                            }
-
-                        }
-                    },
-                    new PhoneBookDTO
-                    {
-                        Contact = victor,
-                        AddressList = new List<AddressDTO>
-                        {
-                            new AddressDTO
-                            {
-                                IdContact = victor.IdContact,
-                                Address = "Trojes y castillo",
-                                City = "Santa Cruz",
-                                Country = "Bolivia"
-                            }
-                        },
-                        EmailList = new List<E_MailAddressDTO>
-                        {
-                            new E_MailAddressDTO
-                            {
-                                IdContact = david.IdContact,
-                                EMailAddress = "victor@gmail.com",
-                                EmailType = "Personal"
-                            }
-
-                        },
-                        PhoneList = new List<PhoneDTO>
-                        {
-                            new PhoneDTO
-                            {
-                                IdContact = victor.IdContact,
-                                PhoneNumber = "60478145",
-                                PhoneType = "Movile"
-                            }
-
                         }
                     },
 
@@ -164,4 +72,3 @@ namespace Memory_Data_Storage
         }
     }
 }
-
